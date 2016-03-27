@@ -40,6 +40,8 @@ You need Maven (http://maven.apache.org/) installed. To build xsd2thrift-maven-p
 
 xsd2thrift-maven-plugin has been compiled with Java 8. You may want to adjust source/target settings in the pom.
 
+The branch with-deps includes the code from the project xsd2thrift, with some minor needed modifications. These modifications will be added to xsd2thrift eventually.
+
 
 ### License
 
@@ -53,7 +55,7 @@ Center (see LICENSE-xsom.2).
 ### Contact
 
 Any feedback will be greatly appreciated, at the GitHub project page
-(http://github.com/xorejing/xsd2thrift-maven-plugin)
+(http://github.com/xorejing/xsd2thrift-maven-plugin).
 
 
 
