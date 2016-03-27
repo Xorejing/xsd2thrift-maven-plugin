@@ -49,12 +49,12 @@ public class Xsd2ThriftMojo extends AbstractMojo {
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		this.checkFileSuffix();
 		try {
-			Xsd2Thrift xsd2thrift = new Xsd2Thrift(null, packageName, protocol, nestEnums);
+			Xsd2Thrift xsd2thrift = new Xsd2Thrift(packageName, protocol, nestEnums);
 
 			for (String xschema : xschemaList) {
 				String outputFile = outputDir + File.separator
 				        + xschema.substring(xschema.lastIndexOf("/") + 1, xschema.indexOf(".xsd")) + fileSuffix;
-				xsd2thrift.parseXsd(xschema, outputFile);
+				xsd2thrift.parseXsd(xschema, outputFile, false);
 			}
 		} catch (Xsd2ThriftException e) {
 			throw new MojoExecutionException(e.getMessage(), null);
