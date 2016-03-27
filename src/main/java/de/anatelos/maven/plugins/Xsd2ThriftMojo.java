@@ -3,14 +3,12 @@
  */
 package de.anatelos.maven.plugins;
 
-import java.io.File;
 import java.util.List;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
-//import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
@@ -52,8 +50,8 @@ public class Xsd2ThriftMojo extends AbstractMojo {
 			Xsd2Thrift xsd2thrift = new Xsd2Thrift(packageName, protocol, nestEnums);
 
 			for (String xschema : xschemaList) {
-				String outputFile = outputDir + File.separator
-				        + xschema.substring(xschema.lastIndexOf("/") + 1, xschema.indexOf(".xsd")) + fileSuffix;
+				String outputFile = outputDir + xschema.substring(xschema.lastIndexOf("/"), xschema.indexOf(".xsd"))
+				        + fileSuffix;
 				xsd2thrift.parseXsd(xschema, outputFile, false);
 			}
 		} catch (Xsd2ThriftException e) {
