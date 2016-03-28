@@ -38,7 +38,7 @@ Protocol Buffers (.proto) schemas.
 
 You need Maven (http://maven.apache.org/) installed. To build xsd2thrift-maven-plugin, run `mvn install`.
 
-xsd2thrift-maven-plugin has been compiled with Java 7. You may want to adjust source/target settings in the pom.
+xsd2thrift-maven-plugin has been compiled with Java SE 7.
 
 The fork  (https://github.com/Xorejing/xsd2thrift) , branch feature/maven-plugin includes all needed modifications. These modifications will be added to xsd2thrift eventually.
 
