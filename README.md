@@ -23,6 +23,7 @@ Protocol Buffers (.proto) schemas.
 						<configuration>
 							<protocol>protobuf</protocol><!-- default -->
 							<outputDir>target/generated-sources/proto</outputDir><!-- default -->
+							<debug>false</debug><!-- default -->
 							<packageName>packagename</packageName>
 							<xschemaList>
 								<param>test.xsd</param>
@@ -45,12 +46,14 @@ The fork  (https://github.com/Xorejing/xsd2thrift) , branch feature/maven-plugin
 
 ### License
 
-The code contributed for this package is licensed under LGPL v3 (see LICENSE).
+The code contributed for this package is licensed under LGPL v3 (see LICENSE.LGPL).
 
-XSOM is covered by GPL v2 with classpath exception (see LICENSE-xsom.1).
+xsd2thrift is covered by LGPL v3 (see LICENSE.LGPL).
+
+XSOM is covered by CDDL1.1 (see LICENSE.CDDL+GPL_1.1.html).
 
 XSOM internally uses an URI class, which is copyrighted by Thai Open Source
-Center (see LICENSE-xsom.2).
+Center (see LICENSE.ThaiOpenSource).
 
 ### Contact
 

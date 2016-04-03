@@ -40,6 +40,8 @@ public class Xsd2ThriftMojo extends AbstractMojo {
 	private String protocol;
 	@Parameter
 	private boolean nestEnums = true;
+	@Parameter(defaultValue = "false")
+	private boolean debug;
 
 	private String fileSuffix;
 
@@ -52,7 +54,7 @@ public class Xsd2ThriftMojo extends AbstractMojo {
 			for (String xschema : xschemaList) {
 				String outputFile = outputDir + xschema.substring(xschema.lastIndexOf("/"), xschema.indexOf(".xsd"))
 				        + fileSuffix;
-				xsd2thrift.parseXsd(xschema, outputFile, false);
+				xsd2thrift.parseXsd(xschema, outputFile, debug);
 			}
 		} catch (Xsd2ThriftException e) {
 			throw new MojoExecutionException(e.getMessage(), null);
