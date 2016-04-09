@@ -1,8 +1,7 @@
 # xsd2thrift-maven-plugin
 
 
-A maven plugin frontend for (https://travis-ci.org/tranchis/xsd2thrift). The tool converts XML Schema files (.xsd) to Thrift (.thrift) and
-Protocol Buffers (.proto) schemas.
+A maven plugin frontend for (https://github.com/Xorejing/xsd2thrift). The tool converts XML Schema files (.xsd) to Thrift (.thrift) and Protocol Buffers (.proto) schemas.
 
 
 
@@ -29,6 +28,12 @@ Protocol Buffers (.proto) schemas.
 								<param>test.xsd</param>
 								<param>xschema/anothertest.xsd</param>
 							</xschemaList>
+							<resolverProperties>
+								<property>
+									<name>the remote systemId</name>
+									<value>the local systemId</value>
+								</property>
+							</resolverProperties>
 						</configuration>
 					</execution>
 				</executions>
@@ -41,7 +46,7 @@ You need Maven (http://maven.apache.org/) installed. To build xsd2thrift-maven-p
 
 xsd2thrift-maven-plugin has been compiled with Java SE 7.
 
-The fork  (https://github.com/Xorejing/xsd2thrift) , branch feature/maven-plugin includes all needed modifications. These modifications will be added to xsd2thrift eventually.
+The fork  (https://github.com/Xorejing/xsd2thrift) , branch feature/maven-plugin includes all needed modifications.
 
 
 ### License
